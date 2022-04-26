@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_verona2"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/text_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/fields_container">
+
+        <TextView
+            android:id="@+id/voiti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Вход"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/dobro_pojalovat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:gravity="center"
+            android:text="Добро пожаловать!"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/voiti" />
+
+        <TextView
+            android:id="@+id/zareg"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Выполните вход
+            или зарегистрируйтесь."
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/dobro_pojalovat"
+            app:layout_constraintRight_toRightOf="@id/dobro_pojalovat"
+            app:layout_constraintTop_toTopOf="@id/dobro_pojalovat" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:id="@+id/fields_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/btn_voiti">
+
+        <EditText
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/white"
+            android:hint="Введите вашу почту"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="15dp"
+            android:singleLine="true">
+
+        </EditText>
+
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@color/white"
+            android:hint="Введите пароль"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:singleLine="true">
+
+        </EditText>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_voiti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:background="#FF5722"
+        android:text="Войти"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/pass">
+
+    </Button>
+
+    <LinearLayout
+        android:layout_marginBottom="60dp"
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/forgot_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Забыл пароль?"
+            app:layout_constraintBottom_toBottomOf="@id/pas_reset"
+            app:layout_constraintStart_toStartOf="@id/btn_voiti"
+
+
+            >
+
+        </TextView>
+
+
+        <Button
+            android:id="@+id/pas_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
+            android:text="Нажми сюда"
+            android:textAlignment="textEnd"
+            android:textAllCaps="false"
+            android:textColor="#FF5722"
+            app:layout_constraintEnd_toEndOf="@id/btn_voiti"
+            app:layout_constraintTop_toBottomOf="@id/btn_voiti">
+
+        </Button>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
